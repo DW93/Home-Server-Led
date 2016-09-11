@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>Home</title>
+	
+		<link href="./css/bootstrap.min.css" rel="stylesheet">	<!--bootstrap-->
+		<link href="./css/navbar-fixed-top.css" rel="stylesheet">	<!--top menu????-->
+		<link href="./css/app.css" rel="stylesheet">	<!--longer RGB sliders, RGB color bar at bottom-->
+	
+		<link href="./flat_ui_dist/css/flat-ui.css" rel="stylesheet">	<!--flat ui-->
+	
+		<link rel="shortcut icon" href="../../dist/img/favicon.ico">
+	
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
+		<script src="../../dist/js/vendor/html5shiv.js"></script>
+		<script src="../../dist/js/vendor/respond.min.js"></script>
+		<![endif]-->
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+		<script>
+		
+		</script>
+	</head>
+	
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					<a class="navbar-brand" href="index.html">Home Server</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="http://192.168.1.10:32860/gui/">Downloads</a></li>
+					<li><a href="postbox.html">Postbox</a></li>
+					<li><a href="bookshelf.html">Bookshelf LEDs</a></li>
+					<li><a href="kitchen.html">Kitchen LEDs</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		
+		
+		<div class="container text-center">
+			<div class="jumbotron">
+				<div class="container text-center">
+					<div class="row show-grid">
+						<div class="span2">
+							<div class="well download_btn"><a href="http://192.168.1.10:32860/gui/"><h1>Downloads</h1></a></div>
+						</div>
+					
+						<div class="span2">
+							<div class="well postbox_btn"><a href="postbox.html"><h1>Postbox</h1></a></div>
+						</div>
+					
+						<div class="span2">
+							<div class="well led_btn"><a href="bookshelf.html"><h1>Bookshelf LEDs</h1></a></div>
+						</div>
+					
+						<div class="span2">
+							<div class="well led_btn"><a href="kitchen.html"><h1>Kitchen LEDs</h1></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	
+
+		
+	
+		<script src="./js/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/bootstrap-slider.js"></script>
+		<script src="./js/flat-ui.min.js"></script>
+		<script src="./js/application.js"></script>
+		
+		<!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src=".js/jquery.js"></script>
+		<script src=".js/bootstrap-transition.js"></script>
+		<script src=".js/bootstrap-alert.js"></script>
+		<script src=".js/bootstrap-modal.js"></script>
+		<script src=".js/bootstrap-dropdown.js"></script>
+		<script src=".js/bootstrap-scrollspy.js"></script>
+		<script src=".js/bootstrap-tab.js"></script>
+		<script src=".js/bootstrap-tooltip.js"></script>
+		<script src=".js/bootstrap-popover.js"></script>
+		<script src=".js/bootstrap-button.js"></script>
+		<script src=".js/bootstrap-collapse.js"></script>
+		<script src=".js/bootstrap-carousel.js"></script>
+		<script src=".js/bootstrap-typeahead.js"></script>
+		<script src=".js/bootstrap-affix.js"></script>
+		<script src=".js/holder.js"></script>
+		<script src=".js/prettify.js"></script>-->
+		
+		
+		
+		
+		
+		
+	<script type='text/javascript'>
+    	$(document).ready(function() {
+    		/* Example 1 */
+	    	$('#ex1').slider({
+	          	formatter: function(value) {
+	            	return 'Current value: ' + value;
+	          	}
+	        });
+
+	    	/* Example 2 */
+	        $("#ex2").slider({});
+
+	        /* Example 3 */
+	        var RGBChange = function() {
+	          $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
+	        };
+
+	        var r = $('#R').slider()
+	                	.on('slide', RGBChange)
+	                	.data('slider');
+	        var g = $('#G').slider()
+	                	.on('slide', RGBChange)
+	                	.data('slider');
+	        var b = $('#B').slider()
+	                	.on('slide', RGBChange)
+	                	.data('slider');
+
+	        /* Example 4 */
+	        $("#ex4").slider({
+	        	reversed : true
+	        });
+
+	        /* Example 5 */
+	        $("#ex5").slider();
+			$("#destroyEx5Slider").click(function() {
+				$("#ex5").slider('destroy');
+			});
+
+			/* Example 6 */
+			$("#ex6").slider();
+			$("#ex6").on('slide', function(slideEvt) {
+				$("#ex6SliderVal").text(slideEvt.value);
+			});
+
+			/* Example 7 */
+			$("#ex7").slider();
+			$("#ex7-enabled").click(function() {
+				if(this.checked) {
+					$("#ex7").slider("enable");
+				}
+				else {
+					$("#ex7").slider("disable");
+				}
+			});
+
+			/* Example 8 */
+			$("#ex8").slider({
+				tooltip: 'always'
+			});
+
+			/* Example 9 */
+			$("#ex9").slider({
+				precision: 2,
+				value: 8.115
+			});
+
+	      	/* Example 10 */
+	      	$("#ex10").slider({});
+
+	      	/* Example 11 */
+	      	$("#ex11").slider({
+		        step: 20000,
+		        min: 0,
+		        max: 200000
+	      	});
+
+			/* Example 12 */
+			$("#ex12a").slider({
+				id: "slider12a",
+				min: 0,
+				max: 10,
+				value: 5
+            });
+			$("#ex12b").slider({
+				id: "slider12b",
+				min: 0,
+				max: 10,
+				range: true,
+				value: [ 3, 7 ]
+			});
+			$("#ex12c").slider({
+				id: "slider12c",
+				min: 0,
+				max: 10,
+				range: true,
+				value: [ 3, 7 ]
+			});
+
+			/* Example 13 */
+			$("#ex13").slider({
+				ticks: [0, 100, 200, 300, 400],
+				ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
+				ticks_snap_bounds: 30,
+				value: 200
+			});
+
+			/* Example 14 */
+			$("#ex14").slider({
+				ticks: [0, 100, 200, 300, 400],
+				ticks_labels: ['$0', '$100', '$200', '$300', '$400'],
+				ticks_positions: [0, 30, 70, 90, 100],
+				ticks_snap_bounds: 20,
+				value: 200,
+				reversed: true
+			});
+
+			/* Example 15 */
+			$("#ex15").slider({
+				min: 10,
+				max: 1000,
+				scale: 'logarithmic',
+				step: 10
+			});
+
+			/* Example 16 */
+			$("#ex16a").slider({
+				min  : 0,
+				max  : 10,
+				value: 0,
+				focus: true
+			});
+			$("#ex16b").slider({
+				min  : 0,
+				max  : 10,
+				value: [ 0, 10 ],
+				focus: true
+			});
+
+			/* Example 17 */
+			$("#ex17a").slider({
+				min  : 0,
+				max  : 10,
+				value: 0,
+				tooltip_position:'bottom'
+			});
+			$("#ex17b").slider({
+				min  : 0,
+				max  : 10,
+				value: 0,
+				orientation: 'vertical',
+				tooltip_position:'left'
+			});
+
+			/* Example 18 */
+			$('#ex18a').slider({
+				min  : 0,
+				max  : 10,
+				value: 5,
+				labelledby: 'ex18-label-1'
+			});
+
+			$('#ex18b').slider({
+				min  : 0,
+				max  : 10,
+				value: [3, 6],
+				labelledby: ['ex18-label-2a', 'ex18-label-2b']
+			});
+
+			$('#ex20a').on('click', function(e) {
+				$('#ex20a')
+					.parent()
+					.find(' >.well')
+					.toggle()
+					.find('input')
+					.slider('relayout');
+				e.preventDefault();
+			});
+		});
+    </script>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

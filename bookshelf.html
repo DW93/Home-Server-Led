@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Bookshelf LED Controller</title>
+	
+	<link href="./css/bootstrap.min.css" rel="stylesheet">	<!--bootstrap-->
+	<!--<link href="./css/demo.css" rel="stylesheet">	<!--moves everything to right more-->
+	<link href="./css/navbar-fixed-top.css" rel="stylesheet">	<!--top menu????-->
+	<link href="./css/app.css" rel="stylesheet">	<!--longer RGB sliders, RGB color bar at bottom-->
+	<link href="./css/bootstrap-slider.css" rel="stylesheet">	<!--slider?-->
+	<!--<link href="./css/light.css" rel="stylesheet" type="text/css">	<!--from arduino led thing, for rows and columns of colours-->
+	<link href="./css/colours.css" rel="stylesheet">
+	
+	<link href="./flat_ui_dist/css/flat-ui.css" rel="stylesheet">	<!--flat ui-->
+	
+    <link rel="shortcut icon" href="../../dist/img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="../../dist/js/vendor/html5shiv.js"></script>
+      <script src="../../dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	<script> 		
+		//$('.collapse').collapse();
+	//$('#radio').collapse('toggle');
+	//$('.collapse').collapse();
+		
+		
+	</script>
+	
+	
+  </head>
+  <body>
+    <style>
+      body {
+        min-height: 2000px;
+        padding-top: 70px;
+      }
+    </style>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+		  <a class="navbar-brand" href="index.html">Home Server</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+			<li><a href="index.html">Home</a></li> 	
+            <li><a href="http://192.168.1.10:32860/gui/">Downloads</a></li>
+            <li><a href="postbox.html">Postbox</a></li>
+			<li class="active"><a href="bookshelf.html">Bookshelf LEDs</a></li>
+			<li><a href="kitchen.html">Kitchen LEDs</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+	<div class="container">
+		<div class="jumbotron">
+			<div class="strip_on_off">
+				LED Strip:
+				<tr>
+					<td class="pbm">
+						<span class="bootstrap-switch-square">
+							<input type="checkbox" checked data-toggle="switch" data-on-label="<i class='fui-check'></i>" data-off-label="<i class='fui-cross'></i>" name="switch-04" id="custom-switch-04" />
+						</span>
+					</td>
+				</tr>
+			</div>
+
+			<div class="choose_colour_option">
+				<label class="radio">
+					<input type="radio" class="colour_option" name="colour_type" id="choose_colour" value="select_premade_colours" data-toggle="collapse" data-target="#select_premade_colours">
+					Colour Selection
+				</label>
+			</div>
+
+			<div id="select_premade_colours" class="collapse">
+				<div class="premade_colours">
+					<div class="container text-center">
+						<div class="row">
+
+							<!--red row-->
+							<div class="col-sm-2">
+								<div class="well palette-red">
+	
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well palette-orange">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well palette-yellow">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+							
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							
+							<!--green row-->
+							<div class="col-sm-2">
+								<div class="well palette-green">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+	
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							
+							<!--blue row-->
+							<div class="col-sm-2">
+								<div class="well palette-blue">
+	
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well palette-purple">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+							
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							
+							<!--white row-->
+							<div class="col-sm-2">
+								<div class="well palette-white">
+	
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+							
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="well">
+
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="choose_colour_option">
+				<label class="radio">
+					<input type="radio" class="colour_option" name="colour_type" id="choose_colour" value="select_custom_colours" data-toggle="collapse" data-target="#select_custom_colours">
+	            <!--<input type="radio"                       name="SelectEffect" id="optionsRadios1" value="option1" data-toggle="radio" checked="">-->
+					Custom Colours
+				</label>
+			</div>
+
+			<div id="select_custom_colours" class="collapse">
+				<div class="custom_colour">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-10">
+								<p>
+									<b>Red</b>
+									<br/>
+									<input type="text" class="span8" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="RC" id="R" data-slider-tooltip="hide" data-slider-handle="round" />
+								</p>
+								<p>
+									<b>Green</b>
+									<br/>
+									<input type="text" class="span8" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="GC" id="G" data-slider-tooltip="hide" data-slider-handle="round" />
+								</p>
+								<p>
+									<b>Blue</b>
+									<br/>
+									<input type="text" class="span8" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="BC" id="B" data-slider-tooltip="hide" data-slider-handle="round" />
+								</p>
+							</div>
+						</div>
+						<div id="RGB"></div>
+						<br/>
+						
+						<form action="#" type="get">
+							<select data-toggle="select" class="form-control select select-default mrs mbm">
+								<option value="0">Slot 1</option>
+								<option value="1">Slot 2</option>
+								<option value="2">Slot 3</option>
+								<option value="3">Slot 4</option>
+							</select>
+							<input type="submit" value="Submit" class="btn">
+						</form>
+						
+						<br/>
+						
+						<!--4 save slots-->
+						<div class="col-sm-3">
+							<b>Slot 1</b>
+							<div class="well"></div>
+						</div>
+						<div class="col-sm-3">
+							<b>Slot 2</b>
+							<div class="well"></div>
+						</div>
+						<div class="col-sm-3">
+							<b>Slot 3</b>
+							<div class="well"></div>
+						</div>
+						<div class="col-sm-3">
+							<b>Slot 4</b>
+							<div class="well"></div>
+						</div>
+						<br/>
+						
+					</div>
+				</div>
+			</div>
+
+			<br/>
+			Effects: 
+			<div class="effects">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="led_custom">
+							<div class="col-sm-10">
+								<label class="radio">
+									<input type="radio" name="SelectEffect" id="optionsRadios1" value="option1" data-toggle="radio" checked="">
+									None
+								</label>
+	
+								<label class="radio">
+									<input type="radio" name="SelectEffect" id="optionsRadios2" value="option2" data-toggle="radio">
+									Rainbow
+								</label>
+										
+								<label class="radio">
+									<input type="radio" name="SelectEffect" id="optionsRadios3" value="option3" data-toggle="radio">                                                                       
+									Fade
+								</label>
+							</div>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>	<!--bootstrap-->
+	<script src="./js/bootstrap-slider.js"></script>	<!--bootstrap slider-->
+	<script src="./js/application.js"></script>	<!--?-->
+	<script src="./js/app.js"></script>	<!--makes sliders thinner-->
+	<script src="./js/application.js"></script>	<!--?-->
+	<script src="./flat_ui_dist/js/flat-ui.min.js"></script> <!--flat ui-->
+	<!--<script src="./js/light.js"></script>	<!--from arduino led thing, for rows and columns of colours-->
+
+  </body>
+</html>
