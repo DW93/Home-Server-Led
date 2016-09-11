@@ -1,0 +1,40 @@
+.palette-red {
+  background-color: #FF0000;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-light-red {
+  background-color: #FF6666;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.palette-orange {
+  background-color: #FFA500;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-yellow {
+  background-color: #FFFF00;
+  border-radius: 10px 10px 10px 10px;
+
+}
+.palette-white {
+  background-color: #FFFFFF;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-green {
+  background-color: #008000;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-purple {
+  background-color: #800080;
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+.palette-blue {
+  background-color: #0000FF;
+  border-radius: 10px 10px 10px 10px;
+}

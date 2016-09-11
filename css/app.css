@@ -1,0 +1,84 @@
+.download_btn {
+    background-color: #91bbfc;
+	border-radius: 20px 20px 20px 20px;
+}
+
+.postbox_btn {
+	background-color: #009380;
+	border-radius: 20px 20px 20px 20px;
+}
+
+.led_btn{
+	background-color: #50c878;
+	border-radius: 20px 20px 20px 20px;
+}
+
+#RGB {
+	height: 75px;
+	background: rgb(128, 128, 128);
+	border-radius: 15px 15px 15px 15px;
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+#RC .slider-selection {
+	background: #FF8282;
+}
+#RC .slider-handle {
+	background: red;
+}
+#GC .slider-selection {
+	background: #428041;
+}
+#GC .slider-handle {
+	background: green;
+}
+#BC .slider-selection {
+	background: #8283FF;
+}
+#BC .slider-handle {
+	border-bottom-color: blue;
+}
+#R, #G, #B {
+	width: 900px;
+	height: 150px;
+}
+
+
+
+.choose_colour {
+	border-radius: 15px 15px 15px 15px;
+	padding-top: 20px;
+}
+
+.custom_colour {
+	border-radius: 15px 15px 15px 15px;
+	background:#95A5A6;
+}
+
+.premade_colours {
+	border-radius: 15px 15px 15px 15px;
+	padding-top: 20px;
+	background: #95A5A6;
+}
+
+
+.effects {
+	border-radius: 15px 15px 15px 15px;
+	padding-top: 20px;
+	background: #95A5A6;
+}
+
+.choose_colour_option1 {
+	border-radius: 15px 15px 15px 15px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+ .collapse {
+     display: none;
+ }
+ .collapse.send-now {
+     display: block;
+ }
