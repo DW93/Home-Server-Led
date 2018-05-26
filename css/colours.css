@@ -1,40 +1,128 @@
-.palette-red {
-  background-color: #FF0000;
+/* Colours for premade selection*/
+/*--------------------------------------------------------*/
+/* 6 red colours */
+.palette-red1 {
+  background-color: #FF0000;    /* rgb(255, 0, 0) */
   border-radius: 10px 10px 10px 10px;
 }
 
-.palette-light-red {
-  background-color: #FF6666;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.palette-orange {
-  background-color: #FFA500;
+.palette-red2 {
+  background-color: #ff4000;    /* rgb(255, 64, 0) */
   border-radius: 10px 10px 10px 10px;
 }
 
-.palette-yellow {
-  background-color: #FFFF00;
+.palette-red3 {
+  background-color: #ff8000;    /* rgb(255, 128, 0) */
   border-radius: 10px 10px 10px 10px;
-
 }
+
+.palette-red4 {
+  background-color: #ffbf00;    /* rgb(255, 191, 0) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-red5 {
+  background-color: #FF0000;    /* rgb(255, 255, 0) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-red6 {
+  background-color: #FF0000;    /* rgb(255, 0, 0) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+/*--------------------------------------------------------*/
+/* 6 green colours */
+.palette-green1 {
+  background-color: #99cc00;    /* rgb(153, 204, 0) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-green2 {
+  background-color: #66cc00;    /* rgb(102, 204, 0) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-green3 {
+  background-color: #00cc00;    /* rgb(0, 204, 0) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-green4 {
+  background-color: #00cc33;    /* rgb(0, 204, 51) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-green5 {
+  background-color: #00cc66;    /* rgb(0, 204, 102) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-green6 {
+  background-color: #008000;    /* rgb(255, 0, 0) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+/*--------------------------------------------------------*/
+/* 6 blue colours */
+.palette-blue1 {
+  background-color: #00ffff;    /* rgb(0, 255, 255) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-blue2 {
+  background-color: #00bfff;    /* rgb(0, 191, 255) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-blue3 {
+  background-color: #0080ff;    /* rgb(0, 128, 255) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-blue4 {
+  background-color: #0040ff;    /* rgb(0, 64, 255) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-blue5 {
+  background-color: #0000ff;    /* rgb(0, 0, 255) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-blue6 {
+  background-color: #4000ff;    /* rgb(64, 0, 255) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+/*--------------------------------------------------------*/
+/* 6 white colours */
 .palette-white {
-  background-color: #FFFFFF;
+  background-color: #FFFFFF;    /* rgb(255, 255, 255) */
   border-radius: 10px 10px 10px 10px;
 }
 
-.palette-green {
-  background-color: #008000;
+.palette-white2 {
+  background-color: #d966ff;    /* rgb(217, 102, 255) */
   border-radius: 10px 10px 10px 10px;
 }
 
-.palette-purple {
-  background-color: #800080;
+.palette-white3 {
+  background-color: #ff66ff;    /* rgb(255, 102, 255) */
   border-radius: 10px 10px 10px 10px;
 }
 
+.palette-white4 {
+  background-color: #ff66d9;    /* rgb(255, 102, 217) */
+  border-radius: 10px 10px 10px 10px;
+}
 
-.palette-blue {
-  background-color: #0000FF;
+.palette-white5 {
+  background-color: #ff66b3;    /* rgb(255, 102, 179) */
+  border-radius: 10px 10px 10px 10px;
+}
+
+.palette-white6 {
+  background-color: #ff668c;    /* rgb(255, 102, 140) */
   border-radius: 10px 10px 10px 10px;
 }
