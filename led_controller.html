@@ -45,7 +45,7 @@
 			<div class="choose_colour_option">
 				<label class="radio">
 					<input type="radio" class="colour_option" name="colour_type" id="choose_colour" value="select_premade_colours" data-toggle="collapse" data-target="#select_premade_colours">
-					Colour Selection
+					<h6>Colour Selection</h6>
 				</label>
 			</div>
 
@@ -163,7 +163,7 @@
 			<div class="choose_colour_option">
 				<label class="radio">
 					<input type="radio" class="colour_option" name="colour_type" id="choose_colour" value="select_custom_colours" data-toggle="collapse" data-target="#select_custom_colours">
-					Custom Colours
+					<h6>Custom Colours</h6>
 				</label>
 			</div>
 
@@ -194,35 +194,35 @@
 						<br/>
 						
                         Save to:
-						<form action="#" type="get">
-							<select data-toggle="select" class="form-control select select-default mrs mbm">
+						<form>
+							<select name="slot" data-toggle="select" class="form-control select select-default mrs mbm">
 								<option value="0">Slot 1</option>
 								<option value="1">Slot 2</option>
 								<option value="2">Slot 3</option>
 								<option value="3">Slot 4</option>
 							</select>
-							<input type="submit" value="Save" class="btn">
+							<input type="submit" value="Save" class="btn" onclick="saveColourToSlot('slot')">
 						</form>
 						
 						<br/>
 						
 						<!--4 save slots-->
-                        <div id="custom_slot_1" class="col-sm-3" onclick="getCustomSlot(1)">
+                        <div id="custom_slot_1" class="col-sm-3" onclick="getCustomSlotColour('1')">
                         <b>Slot 1</b>
                             <div class="well palette-red"></div>
                         </div>
 
-                        <div id="custom_slot_2" class="col-sm-3" onclick="getCustomSlot(2)">
+                        <div id="custom_slot_2" class="col-sm-3" onclick="getCustomSlotColour('2')">
                         <b>Slot 2</b>
                             <div class="well palette-red"></div>
                         </div>
                         
-                        <div id="custom_slot_3" class="col-sm-3" onclick="getCustomSlot(3)">
+                        <div id="custom_slot_3" class="col-sm-3" onclick="getCustomSlotColour('3')">
                         <b>Slot 3</b>
                             <div class="well palette-red"></div>
                         </div>
                         
-                        <div id="custom_slot_4" class="col-sm-3" onclick="getCustomSlot(4)">
+                        <div id="custom_slot_4" class="col-sm-3" onclick="getCustomSlotColour('4')">
                         <b>Slot 4</b>
                             <div class="well palette-red"></div>
                         </div>
@@ -232,33 +232,44 @@
 				</div>
 			</div>
 
-			<br/>
-			Effects: 
-			<div class="effects">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="led_custom">
-							<div class="col-sm-10">
-								<label class="radio">
-									<input type="radio" name="SelectEffect" id="optionsRadios1" value="option1" data-toggle="radio" checked="">
-									None
-								</label>
-	
-								<label class="radio">
-									<input type="radio" name="SelectEffect" id="optionsRadios2" value="option2" data-toggle="radio">
-									Rainbow
-								</label>
-										
-								<label class="radio">
-									<input type="radio" name="SelectEffect" id="optionsRadios3" value="option3" data-toggle="radio">                                                                       
-									Fade
-								</label>
-							</div>
-						</div>
-					</div>
-					<br/>
-				</div>
+            <div class="choose_effects">
+				<label class="radio">
+					<input type="radio" class="colour_option" name="colour_type" id="choose_colour" value="select_effects" data-toggle="collapse" data-target="#select_effects">
+					<h6>Effects</h6>
+				</label>
 			</div>
+            <div id="select_effects" class="collapse">
+                <div class="effects">
+                    <div class="container-fluid">
+                        <div class="led_custom">
+                            <div class="col-sm-10">
+                                <label class="radio">
+                                    <input type="radio" onclick="leds_off()" name="SelectEffect" id="optionsRadios1" value="option1" data-toggle="radio" checked="">
+                                    <h6>None</h6>
+                                </label>
+    
+                                <label class="radio">
+                                    <input type="radio" onclick="rainbowEffect()" name="SelectEffect" id="optionsRadios2" value="option2" data-toggle="radio">
+                                    <h6>Rainbow</h6>
+                                </label>
+                                        
+                                <label class="radio">
+                                    <input type="radio" onclick="glowEffect()" name="SelectEffect" id="optionsRadios3" value="option3" data-toggle="radio">                                                                       
+                                    <h6>Glow</h6>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+            
+            <div class="off">
+				<label class="radio">    
+					<input type="radio" onclick="leds_off()" class="colour_option" name="colour_type" id="leds_off">
+					<h6>Off</h6>
+				</label>
+			</div>
+            
 		</div>
 	</div>
 
